@@ -1,0 +1,6 @@
+## Interface: 11302
+## Title: Goonie Guild Chat
+## Author: Nick Romano
+## Version: 0.1
+
+main.lua
