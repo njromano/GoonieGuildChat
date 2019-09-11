@@ -1,5 +1,5 @@
 local GOON_STRING = "G{skull}{skull}NS";
-local GOON_DELAY = 60;
+local GOON_DELAY = 60; -- seconds
 
 -- set initial goon time
 nextGoonTime = time();
@@ -12,7 +12,7 @@ goonFrame:RegisterEvent("CHAT_MSG_GUILD");
 -- script
 goonFrame:SetScript('OnEvent', function(self, event, msg, sender, ...)
     -- rip out server from 'name-server', leaving only 'name'
-    local nameOnly = "noname";
+    local nameOnly = sender;
     for match in string.gmatch(sender, "(.+)-.") do
         nameOnly = match
     end
