@@ -4,7 +4,7 @@ local GOON_DELAY = 60;
 nextGoonTime = time();
 local playerName = UnitName("player");
 local goonFrame = CreateFrame("Frame");
-goonFrame:RegisterEvent("CHAT_MSG_WHISPER");
+goonFrame:RegisterEvent("CHAT_MSG_GUILD");
 goonFrame:SetScript('OnEvent', function(self, event, msg, sender, ...)
     local match = string.gmatch(sender, "(*)-*");
     local nameOnly = "noname";
