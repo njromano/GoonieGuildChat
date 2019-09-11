@@ -12,7 +12,6 @@ goonFrame:RegisterEvent("CHAT_MSG_GUILD");
 -- script
 goonFrame:SetScript('OnEvent', function(self, event, msg, sender, ...)
     -- rip out server from 'name-server', leaving only 'name'
-    local match = string.gmatch(sender, "(*)-*");
     local nameOnly = "noname";
     for match in string.gmatch(sender, "(.+)-.") do
         nameOnly = match
